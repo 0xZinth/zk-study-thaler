@@ -58,13 +58,13 @@ Backend is the "actual" SNARK. Generally there are three steps
 
 1) A polynomial IOP. [see intro in this newer paper](https://eprint.iacr.org/2020/1022.pdf)
 2) A polynomial commitement scheme [PCS](https://erroldrummond.gitbook.io/snark-fundamentals/part-2/polynomial-commitment-schemes)
-3) Apply fiat shamir (turns an interactive public coin protocal into a non interactive scheme)
+3) Apply [Fiat–Shamir heuristic](https://en.wikipedia.org/wiki/Fiat%E2%80%93Shamir_heuristic) (turns an interactive <em>public coin</em> protocal into a non interactive scheme.) See [original paper](https://link.springer.com/chapter/10.1007/3-540-47721-7_12)
 
 Add in zero knowledge later. There are some specific techniques. e.g. !) Run through a zkSNARK prove that you know the proof. 2) Prover sends hiding commmitments instead of field elements.
 
 Also see [here](https://medium.com/@Luca_Franceschini/a-guide-to-zero-knowledge-proofs-part-2-7904dee9758d)
 
-Groth16 is an exception to this design paradigm (uses a linear PCP (), does use polynomial commitement (KZG), does not use fiat shamir (trusted setup covers))
+[Groth16](https://eprint.iacr.org/2016/260.pdf) is an exception to this design paradigm (uses a linear PCP (), does use polynomial commitement (KZG), does not use fiat shamir (trusted setup covers))
 
 ### Polynomial IOP (PIOP)
 
@@ -84,41 +84,45 @@ PIOPs and Polynomial Commitment can be mixed and matched except each can be univ
 
 - [Plonk](https://eprint.iacr.org/2019/953)
 - [Marlin](https://eprint.iacr.org/2019/1047.pdf)
-- STARK PIOP
+- [STARK PIOP](https://eprint.iacr.org/2016/116)
 
 #### MIPS (multi prover interactive proofs)
 
-- Spartan
+- [Spartan](https://eprint.iacr.org/2019/550)
 
 #### interactive proofs
 
-- GKR
+- [GKR](https://people.cs.georgetown.edu/jthaler/GKRNote.pd)
 
 ### Polynomial Commitement schemens (three categories)
 
 #### trusted setup use EC pairing freindly groups (low verifier costs)
 
-- [KZK](https://link.springer.com/chapter/10.1007/978-3-642-17373-8_11)
+- [KZK](https://link.springer.com/chapter/10.1007/978-3-642-17373-8_11) - univariate
+- [Zeromorph](https://eprint.iacr.org/2023/917) - multilinear
+- [HyperKZG](https://github.com/microsoft/Nova/blob/main/src/provider/hyperkzg.rs) - multilinear
+- [PST](https://eprint.iacr.org/2011/587) - multilinear
 
 ### transparent EC curves
 
-- (Bulletproofs)[https://eprint.iacr.org/2017/1066] called also called (IPA)[https://eprint.iacr.org/2016/263]
-- Dory
-- Hyrax
+- [Bulletproofs](https://eprint.iacr.org/2017/1066) called also called [IPA](https://eprint.iacr.org/2016/263)
+- [Dory](https://eprint.iacr.org/2020/1274)
+- [Hyrax](https://eprint.iacr.org/2017/1132)
 
 ### Hashing Based - Error correcting codes
 
-- FRI
-- Ligero
-- Breakdown
-- Binius
-- FRI-Binius
+- [FRI](https://eccc.weizmann.ac.il/report/2017/134/)
+- [Ligero](https://eprint.iacr.org/2022/1608)
+- [Breakdown](https://eprint.iacr.org/2021/1043)
+- [Binius](https://www.irreducible.com/posts/binius-hardware-optimized-snark)
+- [FRI-Binius](https://www.irreducible.com/posts/fri-binius)
+- [Base Fold](https://eprint.iacr.org/2023/1705)
 
 ## Other Design topics
 
 Get best properties by mixing SNARKs using SNARK *composition*.
 
-Acuumulation / folding schemes like e.g. nova, protostar useful for controlligg prover space.
+Acuumulation / folding schemes like e.g. [nova](https://eprint.iacr.org/2023/573), [protostar](https://eprint.iacr.org/2023/620) useful for contorlling prover space.
 
 Today there is a need chop a proof into small pieces and aggregate due to large hardware size needs.  instead of just doing recursive snarks use this accumulation or folding scheme.
 
@@ -132,12 +136,3 @@ Start with more about prover and verifier cost trade offs and move into chap 1 o
 - [Session with Notes](https://youtu.be/QVNsxryPgUo?si=W3EqkjK2--S7ulIL)
 - [Session without Notes](https://youtu.be/qQ7yIEJKCtE?si=AMlc5zYGi3Pzx6hb)
 - [Notes](Session1Note.pdf)
-
-
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```

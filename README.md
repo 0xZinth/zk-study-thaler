@@ -33,4 +33,4 @@ People generally feel more comfortable if they've seen some finite fields and el
 
 ## Weeks
 
-- Week 1
+- [Week1](sessions/Session1.md)

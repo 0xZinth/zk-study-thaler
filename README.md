@@ -31,6 +31,11 @@ People generally feel more comfortable if they've seen some finite fields and el
 - [Number Theory](https://explained-from-first-principles.com/number-theory/#contributions)
 - [The Animated Elliptic Curve](https://curves.xargs.org/)
 
+## Implementations
+
+- [[pazk-in-rust]]
+
+
 ## Weeks
 
 - [Week1](sessions/Session1.md)

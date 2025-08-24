@@ -10,15 +10,14 @@ Notes and resources for study group on Justin Thalers book Proofs, Arguments, an
 - [A curated list of awesome ZK resources](https://github.com/ventali/awesome-zk)
 - [Awesome Folding](https://github.com/lurk-lab/awesome-folding)
 - [A guide to Zero Knowledge Proofs](https://medium.com/@Luca_Franceschini/a-guide-to-zero-knowledge-proofs-f2ff9e5959a8)
+- [Awesome Rust Cryptography](https://cryptography.rs/)
 
-## Previous from July 2022
+## Lecture Playlists and Notes
 
 - [Python/Rust implementations and notes ](https://github.com/thor314/pazk)
-- [Playlist on ZK HACK channel](https://youtube.com/playlist?list=PLj80z0cJm8QEmZkGgSOLpr_8B08SCWVQ7&si=F7Qb52oRfLK2ePQ5)
-
-## Previous from March 2023
-
-- [Playlist](https://youtube.com/playlist?list=PL_YzrmMHtTBQAauTGILpt4gqzu0opWtxq&si=D-xenEnrZzaF-6j3)
+- [Playlist on ZK HACK 2022](https://youtube.com/playlist?list=PLj80z0cJm8QEmZkGgSOLpr_8B08SCWVQ7&si=F7Qb52oRfLK2ePQ5)
+- [Playlist 2023](https://youtube.com/playlist?list=PL_YzrmMHtTBQAauTGILpt4gqzu0opWtxq&si=D-xenEnrZzaF-6j3)
+- [*Playlist 2024*](https://www.youtube.com/playlist?list=PLTPK8HRi5qmlIBA7TDTO8hBOprAc1FIQv)
 
 ## Note ahead of first session
 
@@ -34,7 +33,6 @@ People generally feel more comfortable if they've seen some finite fields and el
 ## Implementations
 
 - [[pazk-in-rust]]
-
 
 ## Weeks
 
